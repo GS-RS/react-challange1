@@ -29,7 +29,6 @@ function App() {
     const pos = repositories.findIndex((repo) => repo.id === id);
     repositories.splice(pos, 1);
     setRepositories([...repositories]);
-    console.log(repositories);
   }
 
   return (
