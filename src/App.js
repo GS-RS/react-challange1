@@ -40,23 +40,21 @@ function App() {
 
         {
   repositories.map((repo) => (
-    <>
-      <li key={repo.id}>
-        {repo.title}
-        <button type="button" onClick={() => handleRemoveRepository(repo.id)}>
-          Remover
-        </button>
-      </li>
 
+    <li key={repo.id}>
+      {repo.title}
+      <button key={repo.id} type="button" onClick={() => handleRemoveRepository(repo.id)}>
+        Remover
+      </button>
+    </li>
 
-    </>
 
   ))
 }
 
       </ul>
 
-      <button onClick={handleAddRepository}>Adicionar</button>
+      <button type="button" onClick={handleAddRepository}>Adicionar</button>
 
     </>
   );
